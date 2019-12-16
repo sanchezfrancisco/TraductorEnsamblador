@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abrir archivo</title>
+</head>
+<body>
+  <form action="AbrirArchivoLectura.php" method="get">
+    <font face="Freestyle Script,arial black,verdana" size="6">Seleccione el archivo que desea abrir: <br/><br/></font>
+    <input type="file" name="NombreArchivo">
+    <input type="submit" value="Abrir">
+      <!--<?php
+      /////////////ENLISTAR LOS FICHEROS EXISTENTES /////////////////////////////////////
+      $listar = null;
+      $directorio= opendir("documentos/");
+
+      while ($elemento = readdir($directorio))
+      {
+        if ($elemento != '.' && $elemento != '..')
+        {
+          if (is_dir("documentos/".$elemento))
+          {
+            $listar .="<a class=' col-md-6' href='documentos/$elemento' target='_blank'> 
+            $elemento/</a>
+            <br><br>";
+          }
+          else
+          {
+             $listar .="<a class=' col-md-6' href='documentos/$elemento' target='_blank'> 
+            $elemento</a>
+            <br><br>";
+          }
+        }
+      }
+      ?>-->
+  </form> 
+</body>
+</html>

@@ -1,0 +1,8 @@
+.LineaCodigo h1
+{
+	text-align: center;
+	color: #fff; /*Color de la letra*/
+	font-family: Freestyle Script; /*Tipo de letra*/
+	padding: 0px;/*Margen por interior*/
+	font-size: 50px;/*tamaño de la letra*/
+}

@@ -1,0 +1,229 @@
+body
+{
+	background: #ffffff; /* Color del fondo.*/
+    background: url(FondoOso.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000; /* Color de la fuente.*/
+    background-position: center 0;
+}
+
+#header 
+{
+	margin:0;
+	width:500px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+* /* Selector universal, cambia todos los aspectos. */
+{
+	margin: 0; /* Margen normal. */
+	padding: 0; /* Margen interno. */
+}
+
+h1 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	font-size: 32px; /* Tamaño de la fuente en pixeles. */
+	font-weight: 300;
+	color: #4c4c4c; /* Color de la fuente para h1. */
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+h2 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	color: red; /* Color de la fuente para h2. */
+	font-size: 20px; /* Tamaño de la fuente en pixeles. */
+}
+
+h3 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	color: red; /* Color de la fuente para h3. */
+	font-size: 20px; /* Tamaño de la fuente en pixeles. */
+}
+
+h4 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	color: red; /* Color de la fuente para h4. */
+	font-size: 20px; /* Tamaño de la fuente en pixeles. */
+}
+
+h5 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	color: red; /* Color de la fuente para h5. */
+	font-size: 20px; /* Tamaño de la fuente en pixeles. */
+}
+
+h6 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	color: red; /* Color de la fuente para h6. */
+	font-size: 20px; /* Tamaño de la fuente en pixeles. */
+}
+
+h7 /* Se pueden agregar con comas mas etiquetas. h1, h2, h3, ...*/
+{
+	color: #000000; /* Color de la fuente para h7. */
+	font-size: 20px; /* Tamaño de la fuente en pixeles. */
+}
+
+p /* Párrafos. */
+{
+	font-size: 14px;
+    width: 150px;
+    display: inline-block;
+    margin-left: 18px;
+    color: #000000;
+}
+
+a /* texto con hypervinculo. */
+{
+	color: orange;
+}
+
+p a /* Hpervinculos a dentro de un párrafo.*/
+{
+
+}
+
+.green /* el punto indica que es una clase. */
+{
+	color: green;
+}
+
+h1 .green
+{
+
+}
+
+a[href="http://www.google.com"]
+{
+
+}
+
+.nav > li 
+{
+	float:left;
+}
+			
+.nav li a 
+{
+	background-color:#45C8B4;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+		
+.nav li a:hover 
+{
+	background-color:#434343;
+}
+			
+.nav li ul 
+{
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+			
+.nav li:hover > ul 
+{
+	display:block;
+}
+			
+.nav li ul li 
+{
+	position:relative;
+}
+			
+.nav li ul li ul 
+{
+	right:-140px;
+	top:0px;
+}
+
+#Barra
+{
+	width: 100%;
+	height: 60px;
+	background-color: orange;
+}
+
+#Barra h1
+{
+	text-align: center;
+	color: #fff; /*Color de la letra*/
+	font-family: Freestyle Script; /*Tipo de letra*/
+	padding: 0px;/*Margen por interior*/
+	font-size: 50px;/*tamaño de la letra*/
+}
+
+input[type=radio] 
+{
+	visibility: hidden;
+}
+
+.testbox /* Panel de formulario. */
+{
+	margin: 20px auto;
+    width: 400px; 
+    height: 600px; 
+    -webkit-border-radius: 8px/7px; 
+    -moz-border-radius: 8px/7px; 
+    border-radius: 8px/7px; 
+    background-color: #ebebeb; 
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    border: solid 1px #cbc9c9;
+}
+
+input[type=text],input[type=password]
+{
+	width: 200px; 
+	height: 39px; 
+	-webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+	-moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
+	border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+	background-color: #ffffff; 
+	-webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+	-moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+	box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+	border: solid 1px #cbc9c9;
+	margin-left: -5px;
+	margin-top: 13px; 
+	padding-left: 10px;
+}
+
+a.button
+{
+	font-size: 14px;
+	font-weight: 600;
+	color: white;
+	padding: 6px 25px 0px 20px;
+	margin: 10px 8px 20px 0px;
+	display: inline-block;
+	float: right;
+	text-decoration: none;
+	width: 50px; height: 27px; 
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px; 
+	background-color: #3a57af; 
+	-webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
+	-moz-box-shadow: 0 3px rgba(58,87,175,.75); 
+	box-shadow: 0 3px rgba(58,87,175,.75);
+	transition: all 0.1s linear 0s; 
+	top: 0px;
+	position: relative;
+}
+
+a.button:hover 
+{
+	top: 3px;
+	background-color:#2e458b;
+	-webkit-box-shadow: none; 
+	-moz-box-shadow: none; 
+	box-shadow: none;
+}

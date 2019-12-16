@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/Estilos.css">
+		<title>Traductor a ensamblador</title>
+	</head>
+	<body>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="">Menu</a>
+					<ul>
+						<li><a href="FormNuevoArchivo.html">Nuevo archivo</a></li>
+						<li><a href="">Abrir archivo</a>
+							<ul>
+								<li><a href="FormAbrirArchivoLectura.html">Solo lectura</a></li>
+								<li><a href="FormAbrirArchivoEscritura.html">Solo escritura</a></li>
+								<li><a href="FormAbrirArchivoLecturaEscritura.html">Lectura/escritura</a></li>
+							</ul>
+						</li>
+						<li><a href="FormGuardar.html">Guardar</a></li>
+						<li><a href="FormEliminarArchivo.html">Eliminar</a></li>
+						<li><a href="index.html">Salir</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- Barra de arriba -->
+		<nav id= "Barra">
+			<h1>Tabla de símbolos</h1>
+		</nav>
+		<br/>
+		<textarea name="codigo" rows="35" cols="190" wrap="hard" readonly="readonly">TITLE;Definira el nombre de nuestro programa.
+PAGE;Definira el tamaño de nuestro archivo filas y columnas.
+AH;registro.
+AL;registro.
+AX;registro.
+BH;registro.
+BL;registro.
+BP;registro.
+BX;registro.
+CH;registro.
+CL;registro.
+DH;registro.
+DI;registro.
+DL;registro.
+DS;registro.
+DX;registro.
+ES;registro.
+SP;registro.
+SS;registro.
+ASSUME;Comprobración de errores para los valores de los registros.
+.BREAK;Genera codigo para terminar un bloque while o repeat.
+.CODE;Indica el inicio de un segmento de codigo.
+.CONST;Inicia un segmento de datos constante.
+.CONTINUE;Genera codigo para saltar a la parte superior de un bloque while o repeat.
+.DATA ;Inicia un segmento de datos cercano para los datos inicializados.
+.DATA?;Inicia un segmento de datos cercabi para los datos no inicializados.
+DB;Definir datos como BYTE.
+DD;Definir datos como DWORD.
+DF;Definir datos como FWORD.
+DQ;Definir datos como QWORD.
+DT;Definir datos como TBYTE.
+DW;Definir datos como WORD.
+.EXIT;Genera codigo de terminacion.
+.MODEL;Inicializa el modelo de memoria del programa.
+.STACK;Define un segmento de pila.
+$;El valor actual de contador de ubicación.
+?;Un valor que el ensambaldor asigna pero no inicializa.
+@code;El nombre de segmento del codigo macro de texto.
+@data;Nombre del grupo de datos predeterminado.
+@date;La fecha del sistema en fomrato mmddaa.
+@stack;Para pilas lejanas.
+@Time;La hora del sistema en formato hhmmss de 24 horas.
++;Operador que devuelve el resultado de expresión1 más expresión2.
+-;Operador que devuelve el resultado de expresión1 menos expresión2.
+*;Operador que devuelve el resultado de expresión1 por expresión2.
+/;Operador que devuelve el resultado de expresión1 entre expresión2.
+"texto";Trata a texto como una cadena.
+'texto';Trata a texo como una cadena.
+AND;Devuelve el resultado de una operación and a nivel de bits.
+DUP;Especifica el numero de cuenta de declaraciones.
+MASK;Devuelve una mascara de bits.
+NOT;Devuelve espresion con todos los bits invertidos.
+OR;Devuelve el resultado de una operacion or a nivel de bits.
+SEG;Devuelve el segmento de expresion.
+TYPE;Devuelve el tipo de expresion.
+ADD;Un operando de origen se suma a un operando de destino, deben de tener el mismo tamaño.
+CMP;Compara el destino con el origen realizando una resta implicita.
+DIV;Realiza una operacion de entero sin signo.
+INT;Genera una interrupcion de software.
+INT 04H;desbordamiento
+INT 05H;impresion de pantalla
+INT 08H;Cronometro
+INT 09H;interrupcion desde el teclado
+INT 0DH;Control de dispositivos en paralelo
+INT 10H;Funciones de exibicion de video
+INT 13H;Funciones del Bios, E/S
+INT 14H;Comunicaciones de E/S
+INT 15H;Servicios del sistema
+INT 16H;Funciones de entrada del teclado
+INT 1AH;Leer y establecer la hora
+INT 1BH;Obtener el control con una interrupcion de teclado.
+INT 20H;Terminar un programa
+INT 21H;Funciones del dos.
+INT 25H;Lectura absoluta de disco
+INT 26H;Escritura absoluta de disco
+INT 27H;Terminacion permaneciendo residente
+INT 33H;Funciones del Raton
+JMP;Salta sin condicion a una etiqueta de codigo.
+JA;Salta si es mayor.
+JNA;Salta si no es mayor.
+JAE;Salta si es mayor igual.
+JNAE;Salta si no es mayor o igual.
+JB;Salta si es menor.
+JNB;Salta si no es menor.
+JBE;Salta si es menor o igual.
+JNBE;Salta si no es menor o igual.
+JE;Salta si es igual.
+JNE;Salta si no es igual.
+JZ;Salta si es cero.
+JNZ;Salta si no es cero. 
+LEA;Calcula y cambia la direccion efectivca de un operando de memoria.
+LOOP;Decrementa CX  y salta a una etiqueta corta si CX es mayor que 0.
+MOV;Copia un byte o palabra de un operando de origen a un operando de destino.
+SUB;Resta el operando de destino con el operando de origen.
+TEST;Prueba bits indivuduales en el operando de destino.
+WAIT;Suspende la ejecucion de la CPU hasta que el coprocesador termine la instruccion actual.</textarea> <!-- HARD ubica un enter al final de cada linea y envía el texto en el mismo formato en el que fue introducido.-->
+			<?php
+				$Contenido = $_GET['codigo'];
+			?>
+	</body>
+</html>

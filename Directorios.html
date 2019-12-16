@@ -1,0 +1,32 @@
+<?php
+	$listar = null;
+	$directorio = opendir("Documentos/");
+	
+	while ($elemento= readdir($directorio))  
+	{
+		if (id_dir("Documentos/" . $elemento))
+	 	{
+	  		$lista .="<li><a href='Documentos/'>$elemento/</a></li>";
+	 	}
+	 	else
+	 	{
+	  		$lista .="<li><a href='Documentos/'>$elemento</a></li>";
+	 	}//FIN SI
+	}//FIN MIENTRAS
+?>
+
+<!DOCTYPE html>
+<html language="es">
+<head>
+<title>listar archivos</title>
+<meta charset="utf-8">
+<meta "viewport" content="width=device-width, initial-scale=1, maximun-scale=1"/>
+</head>
+   <body>
+        <h1>Listar archivos y carpetas de un directorio</h1>
+        <h3>Listado de archivos y carpetas</h3>
+        <ul>
+         <?php echo $listar ?>
+        </ul>
+  </body>
+</html>

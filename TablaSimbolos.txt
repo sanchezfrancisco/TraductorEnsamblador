@@ -1,0 +1,96 @@
+﻿TITLE;Definira el nombre de nuestro programa;OTRO
+PAGE;Definira el tamaño de nuestro archivo filas y columnas;OTRO
+AH;registro de 8 bits;DATOS
+AL;registro de 8 bits;DATOS
+AX;registro;DATOS
+BH;registro de 8 bits;DATOS
+BL;registro de 8 bits;DATOS
+BP;registro de 8 bits;DATOS
+BX;registro;DATOS
+CH;registro de 8 bits;DATOS
+CL;registro de 8 bits;DATOS
+DH;registro de 8 bits;DATOS
+DI;registro de 8 bits;DATOS
+DL;registro de 8 bits;DATOS
+DS;segmento de datos;SEGMENTO
+DX;registro;DATOS
+ES;segmento extra;SEGMENTO
+SP;registro;DATOS
+SS;segmento de pila(Stack Segment);SEGMENTO
+ASSUME;Comprobración de errores para los valores de los registros;RESERVADA
+.BREAK;Genera codigo para terminar un bloque while o repeat;RESERVADA
+.CODE;Indica el inicio de un segmento de codigo;RESERVADA
+.CONST;Inicia un segmento de datos constante;RESERVADA
+.CONTINUE;Genera codigo para saltar a la parte superior de un bloque while o repeat;RESERVADA
+.DATA ;Inicia un segmento de datos cercano para los datos inicializados;DATOS
+.DATA?;Inicia un segmento de datos cercabi para los datos no inicializados;DATOS
+DB;Definir datos como BYTE;DATOS
+DD;Definir datos como DWORD;DATOS
+DF;Definir datos como FWORD;DATOS
+DQ;Definir datos como QWORD;DATOS
+DT;Definir datos como TBYTE;DATOS
+DW;Definir datos como WORD;DATOS
+.EXIT;Genera codigo de terminacion;RESERVADA
+.MODEL;Inicializa el modelo de memoria del programa;RESERVADA
+.STACK;Define un segmento de pila;RESERVADA
+$;El valor actual de contador de ubicación;RESERVADA
+?;Un valor que el ensambaldor asigna pero no inicializa;RESERVADA
+@code;El nombre de segmento del codigo macro de texto;CODIGO
+@data;Nombre del grupo de datos predeterminado;CODIGO
+@date;La fecha del sistema en fomrato mmddaa;CODIGO
+@stack;Para pilas lejanas;CODIGO;
+@Time;La hora del sistema en formato hhmmss de 24 horas;CODIGO
++;Operador que devuelve el resultado de expresión1 más expresión2;CODIGO
+-;Operador que devuelve el resultado de expresión1 menos expresión2;CODIGO
+*;Operador que devuelve el resultado de expresión1 por expresión2;CODIGO
+/;Operador que devuelve el resultado de expresión1 entre expresión2;CODIGO
+"texto";Trata a texto como una cadena;CODIGO
+'texto';Trata a texo como una cadena;CODIGO
+AND;Devuelve el resultado de una operación and a nivel de bits;CODIGO
+DUP;Especifica el numero de cuenta de declaraciones;CODIGO
+MASK;Devuelve una mascara de bits;CODIGO
+NOT;Devuelve espresion con todos los bits invertidos;CODIGO
+OR;Devuelve el resultado de una operacion or a nivel de bits;CODIGO
+SEG;Devuelve el segmento de expresion;CODIGO
+TYPE;Devuelve el tipo de expresion;CODIGO
+ADD;Un operando de origen se suma a un operando de destino, deben de tener el mismo tamaño;CODIGO
+CMP;Compara el destino con el origen realizando una resta implicita;CODIGO
+DIV;Realiza una operacion de entero sin signo;CODIGO
+INT;Genera una interrupcion de software;CODIGO
+INT 04H;desbordamiento;CODIGO
+INT 05H;impresion de pantalla;CODIGO
+INT 08H;Cronometro;CODIGO
+INT 09H;interrupcion desde el teclado;CODIGO
+INT 0DH;Control de dispositivos en paralelo;CODIGO
+INT 10H;Funciones de exibicion de video;CODIGO
+INT 13H;Funciones del Bios, E/S;CODIGO
+INT 14H;Comunicaciones de E/S;CODIGO
+INT 15H;Servicios del sistema;CODIGO
+INT 16H;Funciones de entrada del teclado;CODIGO
+INT 1AH;Leer y establecer la hora;CODIGO
+INT 1BH;Obtener el control con una interrupcion de teclado;CODIGO
+INT 20H;Terminar un programa;CODIGO
+INT 21H;Funciones del dos;CODIGO
+INT 25H;Lectura absoluta de disco;CODIGO
+INT 26H;Escritura absoluta de disco;CODIGO
+INT 27H;Terminacion permaneciendo residente;CODIGO
+INT 33H;Funciones del Raton;CODIGO
+JMP;Salta sin condicion a una etiqueta de codigo;CODIGO
+JA;Salta si es mayor;CODIGO
+JNA;Salta si no es mayor;CODIGO
+JAE;Salta si es mayor igual;CODIGO
+JNAE;Salta si no es mayor o igual;CODIGO
+JB;Salta si es menor;CODIGO
+JNB;Salta si no es menor;CODIGO
+JBE;Salta si es menor o igual;CODIGO
+JNBE;Salta si no es menor o igual;CODIGO
+JE;Salta si es igual;CODIGO
+JNE;Salta si no es igual;CODIGO
+JZ;Salta si es cero;CODIGO
+JNZ;Salta si no es cero;CODIGO
+LEA;Calcula y cambia la direccion efectivca de un operando de memoria;CODIGO
+LOOP;Decrementa CX  y salta a una etiqueta corta si CX es mayor que 0;CODIGO
+MOV;Copia un byte o palabra de un operando de origen a un operando de destino;CODIGO
+SUB;Resta el operando de destino con el operando de origen;CODIGO
+TEST;Prueba bits indivuduales en el operando de destino;CODIGO
+WAIT;Suspende la ejecucion de la CPU hasta que el coprocesador termine la instruccion actual;CODIGO

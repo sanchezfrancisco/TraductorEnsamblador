@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8"> <!-- idioma español.-->
+		<title>Traductor a ensamblador</title>
+		<link rel="icono" type="icon/png" href="https://www.google.com.mx/url?sa=i&source=images&cd=&ved=2ahUKEwiVlLPr0PPkAhUPna0KHaYgBc4QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F785315253746041805%2F&psig=AOvVaw2jyiisDMChVpf_kQHW9Rdm&ust=1569764008530104">
+		<link rel="stylesheet" type="text/css" href="css/Estilos.css">
+		<title>Pagina web</title>
+	</head>
+	<body>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="">Menu</a>
+					<ul>
+						<li><a href="FormEditor.html">Nuevo archivo</a></li>
+						<li><a href="">Abrir archivo</a>
+							<ul>
+								<li><a href="FormAbrirArchivoLectura.html">Solo lectura</a></li>
+								<li><a href="FormAbrirArchivoEscritura.html">Solo escritura</a></li>
+								<li><a href="FormAbrirArchivoLecturaEscritura.html">Lectura/escritura</a></li>
+							</ul>
+						</li>
+						<li><a href="FormEliminarArchivo.html">Eliminar</a></li>
+						<li><a href="FormEditorTablaSimbolos.html">Tabla de simbolos</a></li>
+					</ul>
+				</li>
+			</ul>
+    		<img src="FondoOso.jpg" width="1366" height="587"/>
+		</div>
+	</body>
+</html>
+
+<?php
+// Esto devolverá todos los archivos de esa carpeta
+$archivos = scandir("/");
+$num=0;
+for ($i=2; $i<count($archivos); $i++)
+{$num++;
+?>
+<!-- Visualización del nombre del archivo !-->
+         
+    <tr>
+      <th scope="row"><?php echo $num;?></th>
+      <td><?php echo $archivos[$i]; ?></td>
+      <td><a title="Descargar Archivo" href="subidas/<?php echo $archivos[$i]; ?>" download="<?php echo $archivos[$i]; ?>" style="color: blue; font-size:18px;"> <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> </a></td>
+      <td><a title="Eliminar Archivo" href="Eliminar.php?name=subidas/<?php echo $archivos[$i]; ?>" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></td>
+    </tr>
+ <?php }?>
